@@ -1,0 +1,8 @@
+pytest==8.0.2
+requests==2.31.0
+python-dotenv==1.0.1
+faker==24.4.0
+jsonschema==4.21.1
+pytest-xdist==3.5.0
+allure-pytest==2.13.2
+tenacity==8.2.3

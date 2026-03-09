@@ -1,0 +1,32 @@
+{
+  "boundary_payloads": [
+    {
+      "scenario": "Negative Price",
+      "payload": {
+        "firstname": "Omer",
+        "lastname": "Uluturk",
+        "totalprice": -100,
+        "depositpaid": true,
+        "bookingdates": {
+          "checkin": "2026-05-01",
+          "checkout": "2026-05-10"
+        },
+        "additionalneeds": "Breakfast"
+      }
+    },
+    {
+      "scenario": "Extremely Long Name",
+      "payload": {
+        "firstname": "OmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmerOmer",
+        "lastname": "Uluturk",
+        "totalprice": 150,
+        "depositpaid": false,
+        "bookingdates": {
+          "checkin": "2026-06-01",
+          "checkout": "2026-06-05"
+        },
+        "additionalneeds": "None"
+      }
+    }
+  ]
+}
