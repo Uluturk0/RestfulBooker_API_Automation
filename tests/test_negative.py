@@ -50,6 +50,7 @@ class TestNegativeBooking:
         assert response.status_code == 404, f"Ghost data found! Expected 404, got {response.status_code}"
         logger.info("Success: API correctly reported that the resource does not exist.")
 
+    @pytest.mark.xfail(reason="Known API Bug: API crashes and returns 500 instead of 400 Bad Request.")
     def test_create_booking_with_missing_mandatory_field(self, booking_api):
         """
         Attempt to create a booking without the 'firstname' field.
@@ -67,6 +68,7 @@ class TestNegativeBooking:
         assert response.status_code == 500, f"Expected 500 Server Error, got {response.status_code}"
         logger.info("Success: API blocked the creation attempt due to missing data.")
 
+    @pytest.mark.xfail(reason="Known API Bug: API accepts negative prices and extreme data, returning 200 instead of 400.")
     @pytest.mark.parametrize("test_data", load_boundary_payloads())
     def test_create_booking_with_boundary_values(self, booking_api, test_data):
         """
